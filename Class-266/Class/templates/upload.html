@@ -1,0 +1,42 @@
+<!-- frontend code for image processing -->
+<html>
+  <title>Image Processing</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link
+    rel="stylesheet"
+    href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+  />
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}" />
+
+  <body>
+    <center>
+      <br />
+      <h1>Image Processing</h1>
+      <hr />
+      <form method="post" action="/" enctype="multipart/form-data">
+        <br /><br />
+        <h2>Select an Image for adding effects.</h2>
+        <br />
+        <!-- Write code for dropdown option and upload and submit button -->
+        <select name="image_type_selection" id="">
+          <option value="gray" class="option">Gray</option>
+          <option value="sketch" class="option">Sketch</option></select
+        ><br /><br />
+        <input
+          type="file"
+          name="file"
+          class="btn btn-primary btn-large"
+        /><br /><br />
+        <input
+          type="submit"
+          value="Submit"
+          class="btn btn-success btn-large"
+        /><br /><br />
+      </form>
+
+      <img
+        src="{{ url_for('display_image', filename=filename) }}"
+      /><br /><br /><br /><br />
+    </center>
+  </body>
+</html>
