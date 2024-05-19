@@ -1,3 +1,5 @@
+<!-- 3rd -->
+
 <html>
   <head>
     <title>Login page</title>
@@ -18,19 +20,7 @@
     <center>
       <h1>OTP Verification</h1>
       <br /><br />
-      <form action="/login" method="post">
-        <input
-          type="text"
-          name="username"
-          placeholder="Username"
-          class="form-control w-25"
-        /><br />
-        <input
-          type="password"
-          name="password"
-          placeholder="Password"
-          class="form-control w-25"
-        /><br />
+      <form action="/login" method="post" style="height: 250px">
         <input
           type="tel"
           name="number"
@@ -42,7 +32,18 @@
           Mobile Number with Country Code, eg. +91xxxx.
         </div>
         <br />
-        <input type="submit" class="btn btn-success btn-lg" value="Get OTP" />
+        <input
+          type="password"
+          name="otp"
+          placeholder="Enter OTP"
+          class="form-control w-25"
+        />
+        <br /><br />
+        <input
+          type="submit"
+          class="btn btn-success btn-lg"
+          value="Submit OTP"
+        />
       </form>
     </center>
   </body>
